@@ -19,38 +19,9 @@ $theme: "" !default;
 #write ol {
   list-style: decimal;
   ol {
-    counter-reset: liist;
-    list-style: none;
-    > li {
-      counter-increment: liist;
-      position: relative;
-    }
-    > li::before {
-      content: "(" counter(liist, lower-alpha) ")";
-      position: absolute;
-      left: -1.8em;
-    }
-
+    list-style: lower-alpha;
     ol {
-      counter-reset: liiist;
-      list-style: none;
-      margin: 0;
-      > li {
-        counter-increment: liiist;
-        position: relative;
-      }
-      > li::before {
-        content: counter(liiist, lower-roman) ".";
-        align-self: flex-end;
-        position: absolute;
-        left: -4.5em;
-        /* -moz-box-sizing: border-box;
-          -webkit-box-sizing: border-box;
-          box-sizing: border-box;*/
-        /* 为了让项目编号是重新用句点对齐而不是左对齐 */
-        width: 4em;
-        text-align: right;
-      }
+      list-style: lower-roman;
     }
   }
 }
